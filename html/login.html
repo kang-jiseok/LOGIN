@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+    <script src="../js/login.js"></script>
     <!-- 로그인 페이지 구성-->
     <div class="login-form">
-        <form>
+        <form name="login">
             <div class="login-id">
                 <h3>아이디</h3>
-                <input type="text" name="userid" class="text-field" placeholder="아이디">
+                <input type="text" name="userid" id="userid" class="text-field" placeholder="아이디">
             </div>
             <div class="login-pw">
                 <h3>비밀번호</h3>
-                <input type="password" name="userpw" class="text-field" placeholder="비밀번호">
+                <input type="password" name="userpw" id="userpw" class="text-field" placeholder="비밀번호">
             </div>
             <div class="login-etc">
                 <input type="checkbox" id="login-keep"><span>로그인 유지</span>
                 <input type="checkbox" id="id-save"><span>아이디 저장</span>
             </div>
             <div class="login-btn">
-                <input type="submit" value="로그인" class="submit-btn" id="btnlogin">
+                <input type="submit" value="로그인" class="submit-btn" onclick="check(this.form)" id="btnlogin">
             </div>
         </form>
         <div class="links">
@@ -34,4 +35,23 @@
         </div>
     </div>
 </body>
+<!--
+<script type="text/javascript">
+    var signinButton = document.getElementById("btnlogin")
+    signinButton.addEventListener('click', btnFunc)
+
+    function btnFunc () {
+        var userid = document.getElementById("userid").value;
+        var userpw = document.getElementById("userpw").value;
+
+        if(userid == "kangjiseok" && userpw == "1234") {
+            alert("로그인 성공");
+            console.log("로그인 성공했습니다.");
+        } else {
+            alert("로그인 실패");
+            console.log("로그인 실패했습니다.");
+        }
+    }
+</script>
+-->
 </html>
